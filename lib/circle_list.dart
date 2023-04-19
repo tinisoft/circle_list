@@ -165,9 +165,8 @@ class _CircleListState extends State<CircleList>
             ),
           ),
           Positioned(
-            left: -75,
-            //  origin.dx,
-            top: origin.dy,
+            left: origin.dx - 20,
+            top: -origin.dy + 30,
             child: Container(
               width: outerRadius * 2,
               height: outerRadius * 2,
@@ -253,10 +252,12 @@ class _CircleListState extends State<CircleList>
             ),
           ),
           Positioned(
-              left: 15,
-              //  origin.dx + outerRadius - innerRadius,
-              top: 75,
+              // left: MediaQuery.of(context).size.width * 0.02,
+              // //  origin.dx + outerRadius - innerRadius,
+              // top: MediaQuery.of(context).size.height / 12,
               // -origin.dy + outerRadius - innerRadius,
+              left: origin.dx + outerRadius - innerRadius,
+              top: -origin.dy + outerRadius - innerRadius,
               child: Transform.rotate(
                 angle: widget.innerCircleRotateWithChildren
                     ? dragModel.angleDiff + widget.initialAngle
