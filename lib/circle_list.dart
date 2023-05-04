@@ -256,8 +256,8 @@ class _CircleListState extends State<CircleList>
               // //  origin.dx + outerRadius - innerRadius,
               // top: MediaQuery.of(context).size.height / 12,
               // -origin.dy + outerRadius - innerRadius,
-              left: origin.dx + outerRadius - innerRadius,
-              top: -origin.dy + outerRadius - innerRadius,
+              left: outerRadius - innerRadius - 60,
+              top: outerRadius - innerRadius + 45,
               child: Transform.rotate(
                 angle: widget.innerCircleRotateWithChildren
                     ? dragModel.angleDiff + widget.initialAngle
